@@ -1,4 +1,4 @@
-# Copyright (C) 2008-2019 LAAS-CNRS, JRL AIST-CNRS, INRIA.
+# Copyright (C) 2008-2024 LAAS-CNRS, JRL AIST-CNRS, INRIA.
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -91,9 +91,11 @@ macro(_SETUP_PROJECT_HEADER)
 
   if(NOT PROJECT_GENERATED_HEADERS_SKIP_CONFIG)
     # Generate config.hh header.
-    generate_configuration_header(
-      ${HEADER_DIR} config.${PROJECT_CUSTOM_HEADER_EXTENSION}
-      ${PACKAGE_CPPNAME} ${PACKAGE_CPPNAME_LOWER}_EXPORTS
+    GENERATE_CONFIGURATION_HEADER(
+      ${HEADER_DIR}
+      config.${PROJECT_CUSTOM_HEADER_EXTENSION}
+      ${PACKAGE_CPPNAME}
+      ${PACKAGE_CPPNAME_LOWER}_EXPORTS
     )
   endif()
 
@@ -169,17 +171,12 @@ function(
   LIBRARY_NAME
   EXPORT_SYMBOL
 )
-  generate_configuration_header_v2(
-    INCLUDE_DIR
-    ${CMAKE_CURRENT_BINARY_DIR}/include
-    HEADER_DIR
-    ${HEADER_DIR}
-    FILENAME
-    ${FILENAME}
-    LIBRARY_NAME
-    ${LIBRARY_NAME}
-    EXPORT_SYMBOL
-    ${EXPORT_SYMBOL}
+  GENERATE_CONFIGURATION_HEADER_V2(
+    INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/include
+    HEADER_DIR ${HEADER_DIR}
+    FILENAME ${FILENAME}
+    LIBRARY_NAME ${LIBRARY_NAME}
+    EXPORT_SYMBOL ${EXPORT_SYMBOL}
   )
 endfunction(GENERATE_CONFIGURATION_HEADER)
 
@@ -276,7 +273,7 @@ endfunction(GENERATE_CONFIGURATION_HEADER_V2)
 macro(_SETUP_PROJECT_HEADER_FINALIZE)
   # If the header list is set, install it.
   if(DEFINED ${PROJECT_NAME}_HEADERS)
-    header_install(${${PROJECT_NAME}_HEADERS})
+    HEADER_INSTALL(${${PROJECT_NAME}_HEADERS})
   endif(DEFINED ${PROJECT_NAME}_HEADERS)
 endmacro(_SETUP_PROJECT_HEADER_FINALIZE)
 
@@ -316,9 +313,20 @@ macro(HEADER_INSTALL)
     string(REGEX REPLACE "${CMAKE_BINARY_DIR}" "" DIR "${DIR}")
     string(REGEX REPLACE "${PROJECT_SOURCE_DIR}" "" DIR "${DIR}")
     string(REGEX REPLACE "include(/|$)" "" DIR "${DIR}")
+    if(CMAKE_VERSION` VERSION_GREATER 3.20)
+      # workaround CMP0177
+      cmake_path(
+        SET
+        INSTALL_PATH
+        NORMALIZE
+        "${CMAKE_INSTALL_INCLUDEDIR}/${DIR}"
+      )
+    else()
+      set(INSTALL_PATH "${CMAKE_INSTALL_INCLUDEDIR}/${DIR}")
+    endif()
     install(
       FILES ${FILE}
-      DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${DIR}"
+      DESTINATION ${INSTALL_PATH}
       PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
       COMPONENT ${_COMPONENT_NAME}
     )
