@@ -1,0 +1,26 @@
+From f81aa7f8d757c6399574fc1b0d4fc8cdd65f6a56 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Thu, 20 Feb 2025 11:40:53 +0100
+Subject: [PATCH] disable unittests
+
+---
+ CMakeLists.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4036e3c..8ec36e2 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -472,9 +472,6 @@ add_subdirectory(src)
+ if (BUILD_PYTHON_INTERFACE)
+   add_subdirectory(python)
+ endif ()
+-if(BUILD_TESTING)
+-  add_subdirectory(test)
+-endif(BUILD_TESTING)
+ 
+ pkg_config_append_libs("coal")
+ IF(COAL_HAS_OCTOMAP)
+-- 
+2.47.0
+
