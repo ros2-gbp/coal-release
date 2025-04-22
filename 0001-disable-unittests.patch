@@ -8,7 +8,7 @@ Subject: [PATCH] disable unittests
  1 file changed, 3 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4036e3c..8ec36e2 100644
+index 4036e3c17542..8ec36e216acb 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -472,9 +472,6 @@ add_subdirectory(src)
@@ -22,5 +22,5 @@ index 4036e3c..8ec36e2 100644
  pkg_config_append_libs("coal")
  IF(COAL_HAS_OCTOMAP)
 -- 
-2.47.0
+2.49.0
 
