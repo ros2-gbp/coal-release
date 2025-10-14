@@ -1,4 +1,4 @@
-From f81aa7f8d757c6399574fc1b0d4fc8cdd65f6a56 Mon Sep 17 00:00:00 2001
+From f69f98cfcb87b1e893c30b139403ab68aed6c13f Mon Sep 17 00:00:00 2001
 From: Guilhem Saurel <guilhem.saurel@laas.fr>
 Date: Thu, 20 Feb 2025 11:40:53 +0100
 Subject: [PATCH] disable unittests
@@ -8,7 +8,7 @@ Subject: [PATCH] disable unittests
  1 file changed, 3 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4036e3c17542..8ec36e216acb 100644
+index 4036e3c..8ec36e2 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -472,9 +472,6 @@ add_subdirectory(src)
@@ -22,5 +22,5 @@ index 4036e3c17542..8ec36e216acb 100644
  pkg_config_append_libs("coal")
  IF(COAL_HAS_OCTOMAP)
 -- 
-2.49.0
+2.51.0
 
