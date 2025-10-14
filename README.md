@@ -1,3 +1,26 @@
+## coal (kilted) - 3.0.2-1
+
+The packages in the `coal` repository were released into the `kilted` distro by running `/nix/store/rrnp44mx5czg1688ynsgf6aibjf0zcq2-python3.12-bloom-0.12.0/bin/bloom-release -r kilted coal` on `Tue, 14 Oct 2025 16:31:32 -0000`
+
+The `coal` package was released.
+
+Version of package(s) in repository `coal`:
+
+- upstream repository: https://github.com/coal-library/coal.git
+- release repository: https://github.com/ros2-gbp/coal-release.git
+- rosdistro version: `3.0.1-2`
+- old version: `3.0.1-2`
+- new version: `3.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## coal (jazzy) - 3.0.2-1
 
 The packages in the `coal` repository were released into the `jazzy` distro by running `/nix/store/rrnp44mx5czg1688ynsgf6aibjf0zcq2-python3.12-bloom-0.12.0/bin/bloom-release -r jazzy coal` on `Tue, 14 Oct 2025 15:49:18 -0000`
