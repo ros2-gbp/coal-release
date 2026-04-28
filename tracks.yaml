@@ -108,4 +108,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/coal-library/coal.git
-    version: :{auto}
+    version: 3.0.2
+    version_saved: :{auto}
