@@ -1,3 +1,26 @@
+## coal (humble) - 3.0.3-4
+
+The packages in the `coal` repository were released into the `humble` distro by running `/nix/store/yr02v08v8dzvm5cbhvlbag590psbayxw-python3.13-bloom-0.14.3/bin/bloom-release -r humble coal` on `Sun, 10 May 2026 10:24:51 -0000`
+
+The `coal` package was released.
+
+Version of package(s) in repository `coal`:
+
+- upstream repository: https://github.com/coal-library/coal.git
+- release repository: https://github.com/ros2-gbp/coal-release.git
+- rosdistro version: `3.0.2-1`
+- old version: `3.0.3-3`
+- new version: `3.0.3-4`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## coal (humble) - 3.0.3-3
 
 The packages in the `coal` repository were released into the `humble` distro by running `/nix/store/yr02v08v8dzvm5cbhvlbag590psbayxw-python3.13-bloom-0.14.3/bin/bloom-release -r humble coal` on `Sun, 10 May 2026 10:21:31 -0000`
