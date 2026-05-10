@@ -1,3 +1,26 @@
+## coal (rolling) - 3.0.3-1
+
+The packages in the `coal` repository were released into the `rolling` distro by running `/nix/store/yr02v08v8dzvm5cbhvlbag590psbayxw-python3.13-bloom-0.14.3/bin/bloom-release -r rolling coal` on `Sun, 10 May 2026 10:46:22 -0000`
+
+The `coal` package was released.
+
+Version of package(s) in repository `coal`:
+
+- upstream repository: https://github.com/coal-library/coal.git
+- release repository: https://github.com/ros2-gbp/coal-release.git
+- rosdistro version: `3.0.2-2`
+- old version: `3.0.2-2`
+- new version: `3.0.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## coal (lyrical) - 3.0.3-1
 
 The packages in the `coal` repository were released into the `lyrical` distro by running `/nix/store/yr02v08v8dzvm5cbhvlbag590psbayxw-python3.13-bloom-0.14.3/bin/bloom-release -r lyrical coal` on `Sun, 10 May 2026 10:44:50 -0000`
