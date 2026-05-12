@@ -59,6 +59,7 @@ set(DOXYGEN_USE_TEMPLATE_CSS TRUE)
 # Need to be set before including base.cmake
 # ----------------------------------------------------
 option(INSTALL_DOCUMENTATION "Generate and install the documentation" OFF)
+option(BUILD_DOCUMENTATION "Generate and install the documentation" OFF)
 option(
   COAL_TURN_ASSERT_INTO_EXCEPTION
   "Turn some critical Coal asserts to exception."
