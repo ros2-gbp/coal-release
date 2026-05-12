@@ -1,17 +1,17 @@
-From b2aa79fce532c733681dc6a404d655ab599ce75b Mon Sep 17 00:00:00 2001
+From 84f863c8348367a42db0d7b1fec8e010b67d1709 Mon Sep 17 00:00:00 2001
 From: Guilhem Saurel <guilhem.saurel@laas.fr>
 Date: Thu, 20 Feb 2025 11:40:53 +0100
-Subject: [PATCH] disable unittests
+Subject: [PATCH 1/2] disable unittests
 
 ---
  CMakeLists.txt | 3 ---
  1 file changed, 3 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ec2822542c..51a69410b8 100644
+index 61bb7cedc8..cead87d39b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -498,9 +498,6 @@ if(BUILD_PYTHON_INTERFACE)
+@@ -495,9 +495,6 @@ if(BUILD_PYTHON_INTERFACE)
      add_subdirectory(python)
    endif()
  endif()
