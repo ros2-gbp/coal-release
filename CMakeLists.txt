@@ -59,7 +59,6 @@ set(DOXYGEN_USE_TEMPLATE_CSS TRUE)
 # Need to be set before including base.cmake
 # ----------------------------------------------------
 option(INSTALL_DOCUMENTATION "Generate and install the documentation" OFF)
-option(BUILD_DOCUMENTATION "Generate and install the documentation" OFF)
 option(
   COAL_TURN_ASSERT_INTO_EXCEPTION
   "Turn some critical Coal asserts to exception."
@@ -496,6 +495,9 @@ if(BUILD_PYTHON_INTERFACE)
     add_subdirectory(python)
   endif()
 endif()
+if(BUILD_TESTING)
+  add_subdirectory(test)
+endif(BUILD_TESTING)
 
 PKG_CONFIG_APPEND_LIBS("coal")
 if(COAL_HAS_OCTOMAP)
