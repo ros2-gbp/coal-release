@@ -1,4 +1,4 @@
-From 84f863c8348367a42db0d7b1fec8e010b67d1709 Mon Sep 17 00:00:00 2001
+From a998d083a788e45980a22b449f57e17115421856 Mon Sep 17 00:00:00 2001
 From: Guilhem Saurel <guilhem.saurel@laas.fr>
 Date: Thu, 20 Feb 2025 11:40:53 +0100
 Subject: [PATCH 1/2] disable unittests
@@ -22,5 +22,5 @@ index 61bb7cedc8..cead87d39b 100644
  PKG_CONFIG_APPEND_LIBS("coal")
  if(COAL_HAS_OCTOMAP)
 -- 
-2.53.0
+2.54.0
 

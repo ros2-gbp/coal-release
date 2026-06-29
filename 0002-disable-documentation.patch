@@ -1,4 +1,4 @@
-From 590014d06b1bfa77574b7635e7e2d45beff75b16 Mon Sep 17 00:00:00 2001
+From 8b5c29eb02bd7f13876f16d871e895c81448631f Mon Sep 17 00:00:00 2001
 From: Guilhem Saurel <guilhem.saurel@laas.fr>
 Date: Tue, 12 May 2026 16:10:40 +0200
 Subject: [PATCH 2/2] disable documentation
@@ -20,5 +20,5 @@ index cead87d39b..1f596afb8a 100644
    COAL_TURN_ASSERT_INTO_EXCEPTION
    "Turn some critical Coal asserts to exception."
 -- 
-2.53.0
+2.54.0
 
